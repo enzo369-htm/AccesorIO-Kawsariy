@@ -6,71 +6,89 @@
     <title>AccesorIO Kawsariy</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f8f800;
-            margin: 0;
-        }
-        .container {
-            width: 90vw;
-            height: 90vh;
-            background-color: yellow;
-            display: grid;
-            grid-template-columns: 1fr 2fr 2fr 1fr;
-            grid-template-rows: auto 2fr 2fr;
-            gap: 10px;
-            padding: 10px;
-            box-sizing: border-box;
-            border: 2px solid black;
-        }
-        .box {
-            background-color: white;
-            border: 2px solid black;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        .title {
-            grid-column: span 4;
+            font-family: Arial, sans-serif;
+            background-color: #ffff99;
             text-align: center;
-            font-size: 24px;
-            font-weight: bold;
+        }
+        h1 {
             text-decoration: underline;
         }
-        .sub-box-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 5px;
-            height: 100%;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
         }
-        .sub-box {
-            background-color: white;
+        .section {
+            background: white;
             border: 2px solid black;
-            padding: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: left;
+        }
+        .large {
+            width: 45%;
+            height: 300px;
+        }
+        .medium {
+            width: 30%;
+            height: 250px;
+        }
+        .small {
+            width: 20%;
+            height: 200px;
+        }
+        textarea {
+            width: 95%;
+            height: 80%;
+            border: none;
+            background: transparent;
+            resize: none;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .section {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
+    <h1>AccesorIO Kawsariy</h1>
     <div class="container">
-        <div class="title">AccesorIO Kawsariy</div>
-        <div class="box" style="grid-column: 1; grid-row: 2;">
-            <div style="text-align: center; font-weight: bold;">4 Referentes Sutiles</div>
-            <div class="sub-box-container">
-                <div class="sub-box">Ref 1:</div>
-                <div class="sub-box">Ref 2:</div>
-                <div class="sub-box">Ref 4:</div>
-                <div class="sub-box">Ref 3:</div>
-            </div>
+        <div class="section medium">
+            <h2>4 Referentes Sutiles</h2>
+            <textarea></textarea>
         </div>
-        <div class="box" style="grid-column: 1; grid-row: 3; font-weight: bold;">Referentes Semanales</div>
-        <div class="box" style="grid-column: 2; grid-row: 2 / span 2; font-weight: bold;">Fallas</div>
-        <div class="box" style="grid-column: 3; grid-row: 2 / span 2; font-weight: bold;">Avances</div>
-        <div class="box" style="grid-column: 4; grid-row: 2; font-weight: bold;">Repetición</div>
-        <div class="box" style="grid-column: 4; grid-row: 3; font-weight: bold;">Sincronidades</div>
+        <div class="section medium">
+            <h2>Referentes Semanales</h2>
+            <textarea></textarea>
+        </div>
+        <div class="section large">
+            <h2>Fallas</h2>
+            <textarea></textarea>
+        </div>
+        <div class="section large">
+            <h2>Avances</h2>
+            <textarea></textarea>
+        </div>
+        <div class="section small">
+            <h2>Repetición</h2>
+            <textarea></textarea>
+        </div>
+        <div class="section small">
+            <h2>Sincronicidades</h2>
+            <textarea></textarea>
+        </div>
     </div>
 </body>
 </html>
+
 
 
