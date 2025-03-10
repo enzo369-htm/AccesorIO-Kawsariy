@@ -2,46 +2,49 @@ import React from "react";
 
 const PageLayout = () => {
   return (
-    <div className="p-4 max-w-screen-lg mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-4">AccesorIO Kawsariy</h1>
-      
-      {/* Sección 1: 4 Referentes Sutiles */}
-      <div className="bg-yellow-300 p-4 rounded-lg mb-4">
+    <div className="p-4 bg-yellow-300 min-h-screen flex flex-col items-center">
+      <h1 className="text-2xl font-bold mb-4 underline">AccesorIO Kawsariy</h1>
+
+      {/* 4 Referentes Sutiles */}
+      <div className="w-full max-w-4xl bg-white p-4 rounded-xl shadow-md mb-4">
         <h2 className="text-xl font-bold underline mb-2">4 Referentes Sutiles</h2>
         <div className="grid grid-cols-2 gap-2">
-          {["Ref 1", "Ref 2", "Ref 4", "Ref 3"].map((ref, index) => (
-            <div key={index} className="border p-2 rounded bg-white">
-              <label className="block font-semibold">{ref}:</label>
-              <input type="text" className="w-full border rounded p-1" />
+          {["Ref 1:", "Ref 2:", "Ref 3:", "Ref 4:"].map((ref, index) => (
+            <div key={index} className="border p-2 rounded bg-gray-100">
+              <label className="block text-sm font-bold">{ref}</label>
+              <textarea className="w-full border rounded p-1 bg-white h-20" />
             </div>
           ))}
         </div>
       </div>
-      
-      {/* Sección 2: Referentes Semanales */}
-      <div className="bg-yellow-300 p-4 rounded-lg mb-4">
+
+      {/* Referentes Semanales */}
+      <div className="w-full max-w-4xl bg-white p-4 rounded-xl shadow-md mb-4">
         <h2 className="text-xl font-bold underline mb-2">Referentes Semanales</h2>
-        <textarea className="w-full border rounded p-2 bg-white h-20"></textarea>
+        <textarea className="w-full border rounded p-1 bg-white h-24" />
       </div>
 
-      {/* Secciones 3 y 4: Fallas y Avances */}
-      {["Fallas", "Avances"].map((title, index) => (
-        <div key={index} className="bg-yellow-300 p-4 rounded-lg mb-4">
-          <h2 className="text-xl font-bold underline mb-2">{title}</h2>
-          <textarea className="w-full border rounded p-2 bg-white h-32"></textarea>
-        </div>
-      ))}
+      {/* Fallas y Avances */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mb-4">
+        {["Fallas", "Avances"].map((title, index) => (
+          <div key={index} className="bg-white p-4 rounded-xl shadow-md">
+            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+            <textarea className="w-full border rounded p-1 bg-white h-32" />
+          </div>
+        ))}
+      </div>
 
-      {/* Secciones 5 y 6: Repetición y Sincronicidades */}
-      {["Repetición", "Sincronicidades"].map((title, index) => (
-        <div key={index} className="bg-yellow-300 p-4 rounded-lg mb-4">
-          <h2 className="text-xl font-bold underline mb-2">{title}</h2>
-          <textarea className="w-full border rounded p-2 bg-white h-32"></textarea>
-        </div>
-      ))}
+      {/* Repetición y Sincronicidades */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl">
+        {["Repetición", "Sincronicidades"].map((title, index) => (
+          <div key={index} className="bg-white p-4 rounded-xl shadow-md">
+            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+            <textarea className="w-full border rounded p-1 bg-white h-32" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 export default PageLayout;
-
