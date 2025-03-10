@@ -7,89 +7,74 @@
     <style>
         body {
             background-color: yellow;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        h1 {
-            text-align: center;
-            text-decoration: underline;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
         .container {
+            width: 90%;
+            max-width: 1400px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: auto;
             gap: 10px;
-            width: 90%;
-            max-width: 1200px;
         }
         .box {
-            border: 2px solid black;
             background-color: white;
+            border: 2px solid black;
             padding: 10px;
         }
         .title {
+            text-align: center;
+            font-size: 24px;
             font-weight: bold;
             text-decoration: underline;
-            text-align: center;
+            margin-bottom: 20px;
         }
         .grid-4 {
-            grid-column: span 1;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 5px;
-            padding: 10px;
         }
         .sub-box {
-            border: 2px solid black;
+            background-color: white;
+            border: 1px solid black;
             padding: 5px;
         }
         textarea {
             width: 100%;
-            height: 100%;
+            height: 100px;
             border: none;
             resize: none;
+            background: transparent;
             font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>AccesorIO Kawsariy</h1>
+    <div class="title">AccesorIO Kawsariy</div>
     <div class="container">
-        <div class="box" style="grid-column: span 1; grid-row: span 2;">
+        <div class="box">
             <div class="title">4 Referentes Sutiles</div>
             <div class="grid-4">
-                <div class="sub-box"><div class="title">Ref 1:</div><textarea></textarea></div>
-                <div class="sub-box"><div class="title">Ref 2:</div><textarea></textarea></div>
-                <div class="sub-box"><div class="title">Ref 4:</div><textarea></textarea></div>
-                <div class="sub-box"><div class="title">Ref 3:</div><textarea></textarea></div>
+                <div class="sub-box">Ref 1:<textarea></textarea></div>
+                <div class="sub-box">Ref 2:<textarea></textarea></div>
+                <div class="sub-box">Ref 4:<textarea></textarea></div>
+                <div class="sub-box">Ref 3:<textarea></textarea></div>
             </div>
         </div>
-        <div class="box" style="grid-column: span 1; height: auto;">
-            <div class="title">Referentes Semanales</div>
-            <textarea></textarea>
-        </div>
-        <div class="box" style="grid-column: span 1; height: auto;">
-            <div class="title">Fallas</div>
-            <textarea></textarea>
-        </div>
-        <div class="box" style="grid-column: span 1; height: auto;">
-            <div class="title">Avances</div>
-            <textarea></textarea>
-        </div>
-        <div class="box" style="grid-column: span 1; height: auto;">
-            <div class="title">Repetición</div>
-            <textarea></textarea>
-        </div>
-        <div class="box" style="grid-column: span 1; height: auto;">
-            <div class="title">Sincronicidades</div>
-            <textarea></textarea>
-        </div>
+        <div class="box" style="grid-column: span 2;">Referentes Semanales<textarea></textarea></div>
+        <div class="box" style="grid-column: span 1;">Fallas<textarea></textarea></div>
+        <div class="box" style="grid-column: span 1;">Avances<textarea></textarea></div>
+        <div class="box" style="grid-column: span 1;">Repetición<textarea></textarea></div>
+        <div class="box" style="grid-column: span 1;">Sincronicidades<textarea></textarea></div>
     </div>
 </body>
 </html>
+
 
