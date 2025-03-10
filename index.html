@@ -2,47 +2,43 @@ import React from "react";
 
 const PageLayout = () => {
   return (
-    <div className="flex flex-col items-center w-full p-4 bg-yellow-300 min-h-screen">
-      <h1 className="text-2xl font-bold underline mb-4">AccesorIO Kawsariy</h1>
+    <div className="p-4 max-w-screen-lg mx-auto">
+      <h1 className="text-3xl font-bold text-center mb-4">AccesorIO Kawsariy</h1>
       
       {/* Sección 1: 4 Referentes Sutiles */}
-      <div className="w-full max-w-4xl bg-white p-4 border border-black mb-4">
+      <div className="bg-yellow-300 p-4 rounded-lg mb-4">
         <h2 className="text-xl font-bold underline mb-2">4 Referentes Sutiles</h2>
         <div className="grid grid-cols-2 gap-2">
-          {["Ref 1:", "Ref 2:", "Ref 4:", "Ref 3:"].map((ref, index) => (
-            <div key={index} className="border border-black p-2">
-              <span className="font-bold">{ref}</span>
-              <textarea className="w-full h-20 border border-gray-400 bg-gray-100 p-1"></textarea>
+          {["Ref 1", "Ref 2", "Ref 4", "Ref 3"].map((ref, index) => (
+            <div key={index} className="border p-2 rounded bg-white">
+              <label className="block font-semibold">{ref}:</label>
+              <input type="text" className="w-full border rounded p-1" />
             </div>
           ))}
         </div>
       </div>
       
       {/* Sección 2: Referentes Semanales */}
-      <div className="w-full max-w-4xl bg-white p-4 border border-black mb-4">
+      <div className="bg-yellow-300 p-4 rounded-lg mb-4">
         <h2 className="text-xl font-bold underline mb-2">Referentes Semanales</h2>
-        <textarea className="w-full h-32 border border-gray-400 bg-gray-100 p-2"></textarea>
+        <textarea className="w-full border rounded p-2 bg-white h-20"></textarea>
       </div>
-      
-      {/* Sección 3 y 4: Fallas y Avances */}
-      <div className="grid grid-cols-2 gap-2 w-full max-w-4xl mb-4">
-        {["Fallas", "Avances"].map((title, index) => (
-          <div key={index} className="bg-white p-4 border border-black">
-            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
-            <textarea className="w-full h-48 border border-gray-400 bg-gray-100 p-2"></textarea>
-          </div>
-        ))}
-      </div>
-      
-      {/* Sección 5 y 6: Repetición y Sincronicidades */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full max-w-4xl">
-        {["Repetición", "Sincronicidades"].map((title, index) => (
-          <div key={index} className="bg-white p-4 border border-black">
-            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
-            <textarea className="w-full h-40 border border-gray-400 bg-gray-100 p-2"></textarea>
-          </div>
-        ))}
-      </div>
+
+      {/* Secciones 3 y 4: Fallas y Avances */}
+      {["Fallas", "Avances"].map((title, index) => (
+        <div key={index} className="bg-yellow-300 p-4 rounded-lg mb-4">
+          <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+          <textarea className="w-full border rounded p-2 bg-white h-32"></textarea>
+        </div>
+      ))}
+
+      {/* Secciones 5 y 6: Repetición y Sincronicidades */}
+      {["Repetición", "Sincronicidades"].map((title, index) => (
+        <div key={index} className="bg-yellow-300 p-4 rounded-lg mb-4">
+          <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+          <textarea className="w-full border rounded p-2 bg-white h-32"></textarea>
+        </div>
+      ))}
     </div>
   );
 };
