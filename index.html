@@ -1,94 +1,51 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AccesorIO Kawsariy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffff99;
-            text-align: center;
-        }
-        h1 {
-            text-decoration: underline;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .section {
-            background: white;
-            border: 2px solid black;
-            margin: 10px;
-            padding: 10px;
-            text-align: left;
-        }
-        .large {
-            width: 45%;
-            height: 300px;
-        }
-        .medium {
-            width: 30%;
-            height: 250px;
-        }
-        .small {
-            width: 20%;
-            height: 200px;
-        }
-        textarea {
-            width: 95%;
-            height: 80%;
-            border: none;
-            background: transparent;
-            resize: none;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .section {
-                width: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <h1>AccesorIO Kawsariy</h1>
-    <div class="container">
-        <div class="section medium">
-            <h2>4 Referentes Sutiles</h2>
-            <textarea></textarea>
+import React from "react";
+
+const PageLayout = () => {
+  return (
+    <div className="flex flex-col items-center w-full p-4 bg-yellow-300 min-h-screen">
+      <h1 className="text-2xl font-bold underline mb-4">AccesorIO Kawsariy</h1>
+      
+      {/* Sección 1: 4 Referentes Sutiles */}
+      <div className="w-full max-w-4xl bg-white p-4 border border-black mb-4">
+        <h2 className="text-xl font-bold underline mb-2">4 Referentes Sutiles</h2>
+        <div className="grid grid-cols-2 gap-2">
+          {["Ref 1:", "Ref 2:", "Ref 4:", "Ref 3:"].map((ref, index) => (
+            <div key={index} className="border border-black p-2">
+              <span className="font-bold">{ref}</span>
+              <textarea className="w-full h-20 border border-gray-400 bg-gray-100 p-1"></textarea>
+            </div>
+          ))}
         </div>
-        <div class="section medium">
-            <h2>Referentes Semanales</h2>
-            <textarea></textarea>
-        </div>
-        <div class="section large">
-            <h2>Fallas</h2>
-            <textarea></textarea>
-        </div>
-        <div class="section large">
-            <h2>Avances</h2>
-            <textarea></textarea>
-        </div>
-        <div class="section small">
-            <h2>Repetición</h2>
-            <textarea></textarea>
-        </div>
-        <div class="section small">
-            <h2>Sincronicidades</h2>
-            <textarea></textarea>
-        </div>
+      </div>
+      
+      {/* Sección 2: Referentes Semanales */}
+      <div className="w-full max-w-4xl bg-white p-4 border border-black mb-4">
+        <h2 className="text-xl font-bold underline mb-2">Referentes Semanales</h2>
+        <textarea className="w-full h-32 border border-gray-400 bg-gray-100 p-2"></textarea>
+      </div>
+      
+      {/* Sección 3 y 4: Fallas y Avances */}
+      <div className="grid grid-cols-2 gap-2 w-full max-w-4xl mb-4">
+        {["Fallas", "Avances"].map((title, index) => (
+          <div key={index} className="bg-white p-4 border border-black">
+            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+            <textarea className="w-full h-48 border border-gray-400 bg-gray-100 p-2"></textarea>
+          </div>
+        ))}
+      </div>
+      
+      {/* Sección 5 y 6: Repetición y Sincronicidades */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full max-w-4xl">
+        {["Repetición", "Sincronicidades"].map((title, index) => (
+          <div key={index} className="bg-white p-4 border border-black">
+            <h2 className="text-xl font-bold underline mb-2">{title}</h2>
+            <textarea className="w-full h-40 border border-gray-400 bg-gray-100 p-2"></textarea>
+          </div>
+        ))}
+      </div>
     </div>
-</body>
-</html>
+  );
+};
 
-
+export default PageLayout;
 
